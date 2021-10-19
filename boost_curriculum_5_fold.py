@@ -22,6 +22,7 @@ count_ = 0
 start = time.time()
 print('start training....')
 for train_index, val_index in kfold.split(range(len(all_train_data))):
+    ## Initialize the weights of the last EFMDG model 
     print("K fold is {}".format(count_))
     train = all_data.loc[train_index, :].reset_index()
     train_ = train.to_numpy().tolist()
@@ -68,3 +69,5 @@ for train_index, val_index in kfold.split(range(len(all_train_data))):
     for epoch in range(epochs):
       ... ## To train the EFMDG model
       ... ## To evaluate the EFMDG model
+      
+    ## save the last EFMDG model
