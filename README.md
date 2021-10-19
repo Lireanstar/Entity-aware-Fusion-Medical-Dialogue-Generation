@@ -14,10 +14,10 @@ contain the common features of doctors. We use the boost strategy to train 4 epo
 on the validation set) to train the dialogue generation model, because these dialogues have more
 entity characteristics. It is easier for the model to adapt to generating longer sentences. We train
 2 epochs for a total of 5-fold.
-#### The reason for designing boost 5-fold
-Although we used the validation set for training, we found that for the generation task, fitting the validation set can better enhance the generalization performance of the model. This method can help generate models to fit difficult samples in course learning. In this way, we can further obtain better results than the original BerTGPT model. The experimental results show that the strategy we proposed is effective. 
+#### The reason for designing the boost 5-fold
+Although we used the validation set for training, we found that for the generation task, fitting the validation set can better enhance the generalization performance of the model. This method can help generate models to fit difficult samples (different splits) in curriculum learning. In this way, we can further obtain better results than the original BerTGPT model. The experimental results show that the strategy we proposed is effective. 
 
 **Question**: Why to choose the boost training rather than directly fine-tuning the whole training set?
 
-**Remarks**: The boost means to continuously train the model initialized with the last trained weight. We save the last trained model as the optimal model. To use the full data is easy to fall into local optimum. After the different divisions (5-fold), different training sets are helpful for jumping out of the local best points.
+**Remarks**: The boost means to continuously train the model initialized with the last trained weight. We save the last trained model as the optimal model. To use the full data is easy to fall into local optimum. After the different splits (5-fold), different training sets are helpful for jumping out of the local best points.
 
