@@ -67,3 +67,4 @@ for train_index, val_index in kfold.split(range(len(all_train_data))):
                                 collate_fn=collate_fn, drop_last=True)
     for epoch in range(epochs):
       ... ## To train the EFMDG model
+      ... ## To evaluate the EFMDG model
