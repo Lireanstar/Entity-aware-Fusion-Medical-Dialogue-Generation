@@ -1,5 +1,5 @@
 
-train_data = torch.load("../data_processed/train_data_all_clean.pth")  ## whole train data processed with the curriculum learning
+train_data = torch.load("../data_processed/train_data_all_clean.pth")  ## The whole train data processed with the curriculum learning
 '''
 (encoder_input, decoder_input, encoder_target,
                                attribute_label, predict_topic_label, predict_item_label)
