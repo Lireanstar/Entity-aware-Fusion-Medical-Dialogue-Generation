@@ -1,5 +1,5 @@
 
-train_data = torch.load("../data_processed/train_data_all_clean.pth")  ## whole train
+train_data = torch.load("../data_processed/train_data_all_clean.pth")  ## whole train data processed with the curriculum learning
 '''
 (encoder_input, decoder_input, encoder_target,
                                attribute_label, predict_topic_label, predict_item_label)
@@ -10,6 +10,7 @@ all_train_data = [[train_data[0][i]] + [train_data[1][i]] + [train_data[2][i]] +
 del train_data
 all_data = pd.DataFrame(all_train_data)
 
+# ------------------------BEGIN CROSS VALIFICATION SETTING--------------
 # For fold results
 # Define the K-fold Cross Validator
 kfold = KFold(n_splits=5, shuffle=True, random_state=2022)
@@ -65,4 +66,4 @@ for train_index, val_index in kfold.split(range(len(all_train_data))):
                                 pin_memory=True,
                                 collate_fn=collate_fn, drop_last=True)
     for epoch in range(epochs):
-      ...
+      ... ## To train the EFMDG model
