@@ -17,7 +17,7 @@ entity characteristics. It is easier for the model to adapt to generating longer
 #### The reason for designing
 Although we used the validation set for training, we found that for the generation task, fitting the validation set can better enhance the generalization performance of the model. This method can help generate models to fit difficult samples in course learning. In this way, we can further obtain better results than the original BerTGPT model. The experimental results show that the strategy we proposed is effective. 
 
-\* **Question**: Why to choose the boost training rather than directly fine-tuning the whole training set?
+**Question**: Why to choose the boost training rather than directly fine-tuning the whole training set?
 
 **Remarks**: The boost means to continuously train the model initialized with the last trained weight. We save the last trained model as the optimal model. To use the full data is easy to fall into local optimum. After the division (5-fold), different training sets are helpful for jumping out of the local best points.
 
