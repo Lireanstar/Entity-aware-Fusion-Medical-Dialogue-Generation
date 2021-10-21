@@ -2,8 +2,8 @@
 This repository contains code and checkpoints for "Distinct but Correct: Generating Diversified and Entity-revised Medical Response".
 #### The more details will be updated soon.
 ## 2021-10-20
-### To add the code of the boost curriculum 5-fold, which is used for finetuning the EFMDG model. 
-#### The designing of the 5-fold curriculum learning
+### To add the code of the boost 5-fold curriculum learning, which is used for finetuning the EFMDG model. 
+#### The designing of the boost 5-fold curriculum learning
 1. The original pre-trained model (i.e., BertGPT-Entity) is utilized to initialize the parameters of the
 encoder and decoder, which is fine-tuned with the cleaned online medical dialogues. Then, we use
 the boost strategy to train 4 epochs for a total of 5-fold;
@@ -14,7 +14,7 @@ contain the common features of doctors. We use the boost strategy to train 4 epo
 on the validation set) to train the dialogue generation model, because these dialogues have more
 entity characteristics. It is easier for the model to adapt to generating longer sentences. We train
 2 epochs for a total of 5-fold.
-#### The reason for designing the boost 5-fold
+#### The reason for designing the boost 5-fold curriculum learning
 Although we used the validation set for training, we found that for the generation task, fitting the validation set can better enhance the generalization performance of the model. This method can help generate models to fit difficult samples (different splits) in curriculum learning. In this way, we can further obtain better results than the original BerTGPT model. The experimental results show that the strategy we proposed is effective. 
 
 **Question**: Why to choose the boost training rather than directly fine-tuning the whole training set?
