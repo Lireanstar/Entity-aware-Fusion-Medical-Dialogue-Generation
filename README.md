@@ -3,7 +3,7 @@ This repository contains code and checkpoints for "Distinct but Correct: Generat
 #### The more details will be updated soon.
 ## 2021-10-20
 ### To add the code of the boost curriculum 5-fold, which is used for finetuning the EFMDG model. 
-#### The designing of the curriculum learning
+#### The designing of the 5-fold curriculum learning
 1. The original pre-trained model (i.e., BertGPT-Entity) is utilized to initialize the parameters of the
 encoder and decoder, which is fine-tuned with the cleaned online medical dialogues. Then, we use
 the boost strategy to train 4 epochs for a total of 5-fold;
