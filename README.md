@@ -20,4 +20,7 @@ Although we used the validation set for training, we found that for the generati
 **Question**: Why to choose the boost training rather than directly fine-tuning the whole training set?
 
 **Remarks**: The boost means to continuously train the model initialized with the last trained weight. We save the last trained model as the optimal model. To use the full data is easy to fall into local optimum. After the different splits (5-fold), different training sets are helpful for jumping out of the local best points.
+## 2022-4-18
+### Our paper is about to publish, we will update the relevant codes soon. 
 
+**Notice** If you have any questions, feel free to send e-mail at libincn@hnu.edu.cn
