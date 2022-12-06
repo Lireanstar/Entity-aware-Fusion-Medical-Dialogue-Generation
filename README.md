@@ -26,7 +26,7 @@ Although we used the validation set for training, we found that for the generati
 **Notice** If you have any questions, feel free to send e-mail at libincn@hnu.edu.cn
 
 ## Citation
-Please feel free to cite our [paper]{https://www.sciengine.com/SCIS/doi/10.1007/s11432-021-3534-9).
+Please feel free to cite our [paper]{https://www.sciengine.com/SCIS/doi/10.1007/s11432-021-3534-9) or our technique report [paper]{https://arxiv.org/abs/2108.01266).
 
     @article{li2022,
        author = "Bin Li and
@@ -42,4 +42,12 @@ Please feel free to cite our [paper]{https://www.sciengine.com/SCIS/doi/10.1007/
        year = "2022",
        url = "http://www.sciengine.com/publisher/Science China Press/journal/SCIENCE CHINA Information Sciences///10.1007/s11432-021-3534-9",
        doi = "10.1007/s11432-021-3534-9"
+    }
+or
+
+    @article{li2021more,
+      title={More but Correct: Generating Diversified and Entity-revised Medical Response},
+      author={Li, Bin and Chen, Encheng and Liu, Hongru and Weng, Yixuan and Sun, Bin and Li, Shutao and Bai, Yongping and Hu, Meiling},
+      journal={arXiv preprint arXiv:2108.01266},
+      year={2021}
     }
